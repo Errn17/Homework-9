@@ -54,18 +54,33 @@ const questions = [
 ];
 
 //console logging to make sure I set up questions correctly
-console.log(questions);
+//console.log(questions);
 
-//Function for pushing the user input to the read me file
-function writeToFile(fileName, data) {
+//Function for collecting the user input to the read me file
+// function writeToFile(fileName, data) {
+//   const content = genMarkdown(data);
+//   fs.writeFile(fileName, content);
+// }
+
+// //Function for pushing the user input to the file
+// function init() {
+//   try {
+//     const userInput = inquirer.prompt(questions);
+//     writeToFile("README.md", userInput);
+//   } catch (err) {
+//     console.log(err);
+//   }
+// }
+
+const writeToFile = async (fileName, data) => {
   const content = genMarkdown(data);
-  fs.writeFile(fileName, content);
-}
+  await fs.writeFile(fileName, content);
+};
 
-function init() {
+async function init() {
   try {
-    const userInput = inquirer.prompt(questions);
-    writeToFile("README.md", userInput);
+    const userInput = await inquirer.prompt(questions);
+    await writeToFile("README.md", userInput);
   } catch (err) {
     console.log(err);
   }
