@@ -53,20 +53,20 @@ inquirer
       message: "What is your email?",
     },
   ])
-  .then(function (res) {
-    console.log(res);
-    username = res.username;
+  .then(function (responses) {
+    console.log(responses);
+    username = responses.username;
     API.getUser(username).then(function (res) {
       console.log(res.data[0].payload.commits[0].author.email);
       const userEmail = res.data[0].payload.commits[0].author.email;
       const user = res.data[0].actor.avatar_url;
-      let title = res.title;
-      let description = res.description;
-      let tableOfContents = res.tableOfContents;
-      let usage = res.usage;
-      let installation = res.installation;
-      let license = res.license;
-      let contribution = res.contribution;
+      let title = responses.title;
+      let description = responses.description;
+      let tableOfContents = responses.tableOfContents;
+      let usage = responses.usage;
+      let installation = responses.installation;
+      let license = responses.license;
+      let contribution = responses.contribution;
 
       let answer =
         "<b>" +
@@ -84,7 +84,7 @@ inquirer
         "\n" +
         "\n" +
         "<b>" +
-        "<h3>How to Install</h3>" +
+        "<h3>What Packages were Installed</h3>" +
         "</b>" +
         "\n" +
         installation +
@@ -95,13 +95,7 @@ inquirer
         "</b>" +
         "\n" +
         "\n" +
-        "<ul>" +
-        "<li>" +
         tableOfContents +
-        "</li>" +
-        "\n" +
-        "\n" +
-        "</ul>" +
         "\n" +
         "\n" +
         "<b>" +

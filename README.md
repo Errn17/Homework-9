@@ -1,25 +1,23 @@
-<b><h1>undefined</h1></b>
+<b><h1>ReadMe Generator</h1></b>
 
 <b><h3>Description of Project</h3></b>
-undefined
+ReadMe.md Generator using command line prompts
 
-<b><h3>How to Install</h3></b>
-undefined
+<b><h3>What Packages were Installed</h3></b>
+Inquirer, Axios, Dotenv
 
 <b><h3>Table of Contents</h3></b>
 
-<ul><li>undefined</li>
-
-</ul>
+undefined
 
 <b><h3>Usage of Project</h3></b>
-undefined
+Generate a ReadMe.md
 
 <b><h3>Licensing</h3></b>
-undefined
+None
 
 <b><h3>Contributors for Project</h3></b>
-undefined
+No, but watched Youtube videos, and read lots of documentation
 
 <b><h3>For questions contact me here</h3></b>
 aaronkh19@gmail.com
